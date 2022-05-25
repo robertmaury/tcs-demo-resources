@@ -29,7 +29,8 @@ jobs:
       - name: Accurics
         uses: accurics/accurics-action@v2.25
         id: accurics
-        # env: 
+        env:
+          repo_url: https://github.com/robertmaury/tcs-demo-resources.git
           # Required by Terraform
           # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           # AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
