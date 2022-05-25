@@ -29,7 +29,8 @@ jobs:
       - name: Accurics
         uses: accurics/accurics-action@v2.25
         id: accurics
-        # env:
+        env:
+          REPO_URL: ${{ github.repositoryUrl }}
           # Required by Terraform
           # AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           # AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -39,7 +40,7 @@ jobs:
           app-id: ${{ secrets.ACCURICS_APP_ID }}
           env-id: ${{ secrets.ACCURICS_ENV_ID }}
           url: https://cloud.tenable.com/cns
-          repo_name: https://github.com/robertmaury/tcs-demo-resources.git
-          directories: 
-            - ./demo-terraform/aws
+          repo: https://github.com/robertmaury/tcs-demo-resources.git
+          directories:
+            "./demo-terraform/aws"
           # Optional args
